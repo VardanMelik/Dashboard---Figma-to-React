@@ -195,20 +195,27 @@ export default function Expenses() {
                             </BarChart>
                         </ResponsiveContainer>
 
-                        <div className={styles.expensesOverviewHeader}>
-                            <p className={styles.expensesOverviewTitle}></p>
+                        <div className={styles.expenseOverviewHeader}>
+                            <p className={styles.expenseOverviewTitle}></p>
                             <button>
                                 <img src={optionIcon} alt="options" />
                             </button>
                         </div>
 
                         <ul>
-                            <li className={styles.expensesItem}>
-                                <div className={styles.expensesItemLeft}>
-                                    <div className={styles.expensesItemDiv}>
+                            <li className={styles.expenseItem}>
+                                <div className={styles.expenseItemLeft}>
+                                    <div className={styles.expenseItemDiv}>
                                         <img src={cartIcon} alt="cart"/>
                                     </div>
+                                    <div className={styles.expenseItemDetails}>
+                                      <p className={styles.expenseItemTitle}>Grocery</p>
+                                      <p className={styles.expenseItemTime}>
+                                        5:12 pm &#8226; Yerevan, Armenia
+                                      </p>
+                                    </div>
                                 </div>
+                                <p className={styles.expenseItemPrice}>-326.80</p>
                             </li>
                         </ul>
                     </section>
