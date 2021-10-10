@@ -21,6 +21,7 @@
 .expensesOverview {
     width: 65%;
     padding: 5rem;
+    overflow-y: scroll;
 }
 
 .expensesHeader {
@@ -130,6 +131,7 @@
     background-color: #f9fafc;
     border-radius: 0 50px 50px 0;
     padding: 5rem 2rem;
+    overflow-y: scroll;
 }
 
 .moneyOverviewTitle {
@@ -139,10 +141,81 @@
 }
 
 .spendCategory {
-    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    //font-weight: 500;
     //font-size: 13px;
 }
 
 .spendCategoryName {
     font-weight: 500;
+}
+
+.spendCategoryPrice {}
+
+.spendCategoryBar {
+    height: 5px;
+    width: 100%;
+    background-color: #ECEFF5;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+
+.spendCategoryColorBar {
+    height: 5px;
+    //width: 10%;
+    background-color: #31BA96;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.saveMoneyDiv {
+    width: 70%;
+    margin: 0 auto;
+    background-color: #EDF0F6;
+    margin-top: 4rem;
+    padding: 2rem;
+    border-radius: 15px;
+    position: relative;
+}
+
+.boxes {
+    position: absolute;
+    top: -15px;
+    left: 29px;
+}
+
+.plant {
+    position: absolute;
+    top: -31px;
+    left: 187px;
+}
+
+.saveMoneyTitle {
+    font-weight: 600;
+    margin-top: 2rem;
+}
+
+.saveMoneyInfo {
+    opacity: 0.7;
+    margin-top: .25rem;
+    line-height: 17px;
+    letter-spacing: 0.428571px;
+}
+
+.button {
+    cursor: pointer;
+    background-color: #101010;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 1.5px;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }

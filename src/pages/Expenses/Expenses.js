@@ -20,6 +20,8 @@ import optionIcon from '../../assets/png/menuIcon.png';
 import cartIcon from '../../assets/svg/cartIcon.svg';
 import transportIcon from '../../assets/svg/transportIcon.svg';
 import houseIcon from '../../assets/svg/houseIcon.svg';
+import boxes from '../../assets/png/boxes.png';
+import plant from '../../assets/png/plant.png';
 
 const todayExpenses = [
   {
@@ -334,19 +336,41 @@ export default function Expenses() {
                             Where'd your money go?
                           </p>
                           <ul>
-                            <li>
+                            {spendCategories.map((category) => (
+                              <li key={category.id}>
                               <div className={styles.spendCategory}>
-                                <p>{styles.spendCategoryName}Food and Drink</p>
-                                <p className={styles.spendCategoryPrice}>872.40</p>
+                                <p className={styles.spendCategoryName}>{category.category}</p>
+                                <p className={styles.spendCategoryPrice}>{category.price.toFixed(2)}</p>
                               </div>
                               <div className={styles.spendCategoryBar}>
-                                <div className={styles.spendCategoryColorBar}>
+                                <div 
+                                  style={{width: `${category.price / spendCategories.reduce((acc, current) => acc + current.price, 0)*100}%`}}
+                                  className={styles.spendCategoryColorBar}>
 
                                 </div>
                               </div>
 
                             </li>
+
+                            ))}
+                            
                           </ul>
+
+                          <div className={styles.saveMoneyDiv}>
+                              <img className={styles.boxes} src={boxes} alt="boxes" />
+                              <img className={styles.plant} src={plant} alt="plant" />
+                              <p className={styles.saveMoneyTitle}>Save more money</p>
+                              <p className={styles.saveMoneyInfo}>
+                                Lorem Ipsum is simply dummy text of the printing and 
+                                typesetting industry. Lorem Ipsum has been the 
+                                industry's standard dummy text ever since the 1500s
+                              </p>
+                              <button 
+                                type="button" 
+                                className={styles.button}>
+                                View Tips
+                              </button>
+                          </div>
                     </section>
                 </div>
             </main>
